@@ -27,20 +27,18 @@ public class Car {
         this.color = Color.BLACK;
     }
 
-    public int numWheels() {
-        return 0;
-    }
+    public int numWheels() { return wheels.size(); }
 
     public int numDoors() {
-        return 0;
+        return doors.size();
     }
 
     public int numRoofs() {
-        return 0;
+        return roofs.size();
     }
 
     public int getColor() {
-        return 0;
+        return color;
     }
 
     public CompanyName getCompanyName() {
