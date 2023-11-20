@@ -4,5 +4,5 @@ import problem2.CompanyName;
 
 public class TeslaWheel extends Wheel{
 
-    public TeslaWheel(CompanyName factoryName) { super(CompanyName.TESLA);}
+    public TeslaWheel() { super(CompanyName.TESLA); }
 }
