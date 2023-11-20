@@ -1,5 +1,6 @@
 package problem3;
 
+import problem2.CompanyName;
 import problem2.door.Door;
 import problem2.factory.CarPartsFactory;
 import problem2.roof.Roof;
@@ -17,6 +18,12 @@ public class CarBuilder implements Builder{
     public CarBuilder(CarPartsFactory factory) {
         this.factory = factory;
         this.car = new Car(); 
+        setCompanyName(factory.getCompanyName()); 
+    }
+    
+    public Builder setCompanyName(CompanyName companyName){
+        this.car.setCompanyName(companyName);
+        return this; 
     }
 
     @Override
