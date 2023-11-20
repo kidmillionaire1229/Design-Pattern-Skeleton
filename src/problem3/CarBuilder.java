@@ -56,7 +56,7 @@ public class CarBuilder implements Builder{
 
     @Override
     public void reset() {
-
+        this.car = new Car(); 
     }
 }
 /**
