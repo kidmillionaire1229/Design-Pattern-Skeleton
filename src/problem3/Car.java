@@ -19,6 +19,11 @@ public class Car {
     private List<Roof> roofs;
     private Color color;
 
+    public Car setDoor(Door door) {
+        this.doors.add(door);
+        return this;
+    }
+
     public Car setRoofs(Roof roof) {
         this.roofs.add(roof);
         return this;
