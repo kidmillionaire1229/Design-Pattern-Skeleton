@@ -1,6 +1,12 @@
 package problem2.factory;
 
 import problem2.CompanyName;
+import problem2.door.Door;
+import problem2.door.TeslaDoor;
+import problem2.roof.Roof;
+import problem2.roof.TeslaRoof;
+import problem2.wheel.TeslaWheel;
+import problem2.wheel.Wheel;
 
 public class TeslaPartsFactory extends CarPartsFactory{
     CompanyName companyName;
@@ -8,7 +14,24 @@ public class TeslaPartsFactory extends CarPartsFactory{
     public TeslaPartsFactory() { this.companyName = CompanyName.TESLA;}
 
     @Override
+    public Door createDoor() {
+        return new TeslaDoor();
+    }
+
+    @Override
+    public Wheel createWheel() {
+        return new TeslaWheel();
+    }
+
+    @Override
+    public Roof createRoof() {
+        return new TeslaRoof(); 
+    }
+
+    @Override
     public CompanyName getCompanyName() {
         return companyName;
     }
+
+
 }
