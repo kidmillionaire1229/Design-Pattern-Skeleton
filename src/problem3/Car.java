@@ -18,6 +18,12 @@ public class Car {
     private List<Wheel> wheels;
     private List<Roof> roofs;
     private Color color;
+
+    public Car setRoofs(Roof roof) {
+        this.roofs.add(roof);
+        return this;
+    }
+
     private CompanyName companyName;
 
     public Car() {
