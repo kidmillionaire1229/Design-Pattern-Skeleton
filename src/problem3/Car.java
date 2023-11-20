@@ -37,6 +37,11 @@ public class Car {
         return roofs.size();
     }
 
+    public Car setColor(Color color) {
+        this.color = color;
+        return this;
+    }
+
     public Color getColor() {
         return color;
     }
