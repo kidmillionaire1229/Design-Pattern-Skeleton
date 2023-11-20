@@ -1,5 +1,6 @@
 package problem3;
 
+import problem2.door.Door;
 import problem2.factory.CarPartsFactory;
 import problem2.roof.Roof;
 
@@ -18,7 +19,11 @@ public class CarBuilder implements Builder{
 
     @Override
     public Builder addDoors(int numDoors) {
-        return null;
+        for (int i = 0; i < numDoors; i++) {
+            Door door = factory.createDoor();
+            this.car.setDoor(door);
+        }
+        return this;
     }
 
     @Override
@@ -30,7 +35,7 @@ public class CarBuilder implements Builder{
     public Builder setRoof() {
         Roof roof = factory.createRoof();
         this.car.setRoofs(roof);
-        return this; 
+        return this;
     }
 
     @Override
