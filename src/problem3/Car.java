@@ -37,7 +37,7 @@ public class Car {
         return roofs.size();
     }
 
-    public int getColor() {
+    public Color getColor() {
         return color;
     }
 
