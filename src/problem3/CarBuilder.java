@@ -1,6 +1,7 @@
 package problem3;
 
 import problem2.factory.CarPartsFactory;
+import problem2.roof.Roof;
 
 /**
  * ==============BEGIN==============
@@ -27,7 +28,9 @@ public class CarBuilder implements Builder{
 
     @Override
     public Builder setRoof() {
-        return null;
+        Roof roof = factory.createRoof();
+        this.car.setRoofs(roof);
+        return this; 
     }
 
     @Override
