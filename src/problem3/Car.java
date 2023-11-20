@@ -24,6 +24,11 @@ public class Car {
         return this;
     }
 
+    public Car setWheel(Wheel wheel) {
+        this.wheels.add(wheel);
+        return this;
+    }
+
     public Car setRoofs(Roof roof) {
         this.roofs.add(roof);
         return this;
