@@ -8,8 +8,8 @@ public class Information {
 
     @org.junit.jupiter.api.Test
     public void info(){
-        id = null;   // insert your student ID (학번)
-        name = null; // insert your name (이름) in Korean
+        id = 20192952;   // insert your student ID (학번)
+        name = "김민준"; // insert your name (이름) in Korean
 
         System.out.println("ID: " + id);
         System.out.println("Name: " + name);
