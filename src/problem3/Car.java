@@ -18,6 +18,7 @@ public class Car {
     private List<Wheel> wheels;
     private List<Roof> roofs;
     private Color color;
+    private CompanyName companyName;
 
     public Car setDoor(Door door) {
         this.doors.add(door);
@@ -34,7 +35,10 @@ public class Car {
         return this;
     }
 
-    private CompanyName companyName;
+    public Car setCompanyName(CompanyName companyName) {
+        this.companyName = companyName;
+        return this;
+    }
 
     public Car() {
         this.doors = new ArrayList<>();
@@ -63,15 +67,15 @@ public class Car {
     }
 
     public CompanyName getCompanyName() {
-        return null;
+        return companyName;
     }
 
     public List<Door> getDoors() {
-        return null;
+        return doors;
     }
 
     public List<Wheel> getWheels() {
-        return null;
+        return wheels;
     }
 
     public Roof getRoof() {
