@@ -8,7 +8,7 @@ import problem2.roof.TeslaRoof;
 import problem2.wheel.TeslaWheel;
 import problem2.wheel.Wheel;
 
-public class TeslaPartsFactory extends CarPartsFactory{
+public class TeslaPartsFactory implements CarPartsFactory{
     CompanyName companyName;
 
     public TeslaPartsFactory() { this.companyName = CompanyName.TESLA;}
@@ -25,7 +25,7 @@ public class TeslaPartsFactory extends CarPartsFactory{
 
     @Override
     public Roof createRoof() {
-        return new TeslaRoof(); 
+        return new TeslaRoof();
     }
 
     @Override
