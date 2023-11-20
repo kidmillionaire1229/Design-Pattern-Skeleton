@@ -3,6 +3,7 @@ package problem3;
 import problem2.door.Door;
 import problem2.factory.CarPartsFactory;
 import problem2.roof.Roof;
+import problem2.wheel.Wheel;
 
 /**
  * ==============BEGIN==============
@@ -28,7 +29,11 @@ public class CarBuilder implements Builder{
 
     @Override
     public Builder addWheels(int numWheels) {
-        return null;
+        for (int i = 0; i < numWheels; i++) {
+            Wheel wheel = factory.createWheel();
+            this.car.setWheel(wheel);
+        }
+        return this;
     }
 
     @Override
