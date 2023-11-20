@@ -8,8 +8,9 @@ import problem2.factory.CarPartsFactory;
  * If necessary, you can make your own methods or classes so that the corresponding tests are passed
  */
 public class CarBuilder implements Builder{
+    CarPartsFactory factory;
     public CarBuilder(CarPartsFactory factory) {
-
+        this.factory = factory;
     }
 
     @Override
