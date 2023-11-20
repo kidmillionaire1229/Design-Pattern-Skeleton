@@ -32,7 +32,8 @@ public class CarBuilder implements Builder{
 
     @Override
     public Builder setColor(Color color) {
-        return null;
+        this.car.setColor(color);
+        return this;
     }
 
     @Override
