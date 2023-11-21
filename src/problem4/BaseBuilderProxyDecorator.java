@@ -13,12 +13,14 @@ import problem3.Color;
 public class BaseBuilderProxyDecorator implements Builder {
     private Builder builder;
 
-    public BaseBuilderProxyDecorator(Builder builder) {
+    private CarPartsFactory carPartsFactory;
 
+    public BaseBuilderProxyDecorator(Builder builder) {
+        this.builder = builder;
     }
 
     public BaseBuilderProxyDecorator(CarPartsFactory factory){
-
+        this.carPartsFactory = factory;
     }
 
     @Override
