@@ -12,12 +12,17 @@ import problem3.Car;
  * If necessary, you can make your own methods or classes so that the corresponding tests are passed
  */
 public class LoggingBuilderProxyDecorator extends BaseBuilderProxyDecorator {
+
+    private SimpleLogger logger;
     public LoggingBuilderProxyDecorator(Builder builder, SimpleLogger logger) {
+
         super(builder);
+        this.logger = logger;
     }
 
     public LoggingBuilderProxyDecorator(CarPartsFactory factory, SimpleLogger logger) {
         super(factory);
+        this.logger = logger;
     }
 
     @Override
