@@ -22,12 +22,21 @@ public class CheckingBuilderProxyDecorator extends BaseBuilderProxyDecorator {
     public Car getCar() {
         Car car = builder.getCar();
         if(!checkCarDoorsValid(car)) return null;
+        if(!checkCarWheelsValid(car)) return null;
         return car;
     }
 
     public static boolean checkCarDoorsValid(Car car) {
         int doorSize = car.getDoors().size();
         if (doorSize < 4 || doorSize > 6) {
+            return false;
+        }
+        return true;
+    }
+
+    public static boolean checkCarWheelsValid(Car car) {
+        int wheelSize = car.getWheels().size();
+        if (wheelSize <2 || wheelSize >6){
             return false;
         }
         return true;
