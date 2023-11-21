@@ -79,7 +79,7 @@ public class Car {
     }
 
     public Roof getRoof() {
-        return null;
+        return roofs.get(0);
     }
 }
 /**
