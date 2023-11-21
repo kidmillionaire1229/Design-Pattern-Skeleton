@@ -45,12 +45,12 @@ public class BaseBuilderProxyDecorator implements Builder {
 
     @Override
     public Car getCar() {
-        return null;
+        return builder.getCar();
     }
 
     @Override
     public void reset() {
-
+        builder.reset();
     }
 }
 /**
