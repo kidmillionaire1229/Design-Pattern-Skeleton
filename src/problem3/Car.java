@@ -79,6 +79,9 @@ public class Car {
     }
 
     public Roof getRoof() {
+        if(roofs.size() == 0){
+            return null;
+        }
         return roofs.get(0);
     }
 }
