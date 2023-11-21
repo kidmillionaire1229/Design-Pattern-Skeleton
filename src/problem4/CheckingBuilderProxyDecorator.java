@@ -36,6 +36,9 @@ public class CheckingBuilderProxyDecorator extends BaseBuilderProxyDecorator {
 
     public static boolean checkCarWheelsValid(Car car) {
         int wheelSize = car.getWheels().size();
+        if (wheelSize % 2 ==1){
+            return false;
+        }
         if (wheelSize <2 || wheelSize >6){
             return false;
         }
