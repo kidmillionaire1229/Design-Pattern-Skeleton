@@ -25,22 +25,26 @@ public class BaseBuilderProxyDecorator implements Builder {
 
     @Override
     public Builder addDoors(int numDoors) {
-        return builder.addDoors(numDoors);
+        builder.addDoors(numDoors);
+        return this;
     }
 
     @Override
     public Builder addWheels(int numWheels) {
-        return builder.addWheels(numWheels);
+        builder.addWheels(numWheels);
+        return this;
     }
 
     @Override
     public Builder setRoof() {
-        return builder.setRoof();
+        builder.setRoof();
+        return this;
     }
 
     @Override
     public Builder setColor(Color color) {
-        return builder.setColor(color);
+        builder.setColor(color);
+        return this;
     }
 
     @Override
