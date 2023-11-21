@@ -20,8 +20,19 @@ public class CheckingBuilderProxyDecorator extends BaseBuilderProxyDecorator {
 
     @Override
     public Car getCar() {
-        return null;
+        Car car = builder.getCar();
+        if(!checkCarDoorsValid(car)) return null;
+        return car;
     }
+
+    public static boolean checkCarDoorsValid(Car car) {
+        int doorSize = car.getDoors().size();
+        if (doorSize < 4 || doorSize > 6) {
+            return false;
+        }
+        return true;
+    }
+
 }
 /**
  * ===============END===============
