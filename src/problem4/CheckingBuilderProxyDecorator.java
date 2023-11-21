@@ -1,6 +1,7 @@
 package problem4;
 
 import problem2.factory.CarPartsFactory;
+import problem2.roof.Roof;
 import problem3.Builder;
 import problem3.Car;
 
@@ -23,6 +24,7 @@ public class CheckingBuilderProxyDecorator extends BaseBuilderProxyDecorator {
         Car car = builder.getCar();
         if(!checkCarDoorsValid(car)) return null;
         if(!checkCarWheelsValid(car)) return null;
+        if(!checkCarRoofValid(car)) return null;
         return car;
     }
 
@@ -43,6 +45,16 @@ public class CheckingBuilderProxyDecorator extends BaseBuilderProxyDecorator {
             return false;
         }
         return true;
+    }
+
+    public static boolean checkCarRoofValid(Car car){
+        Roof roof = car.getRoof();
+        if (roof == null){
+            return false;
+        }
+        else{
+            return true;
+        }
     }
 
 }
