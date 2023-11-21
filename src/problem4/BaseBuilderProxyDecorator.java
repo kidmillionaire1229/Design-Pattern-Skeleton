@@ -3,6 +3,7 @@ package problem4;
 import problem2.factory.CarPartsFactory;
 import problem3.Builder;
 import problem3.Car;
+import problem3.CarBuilder;
 import problem3.Color;
 
 /**
@@ -21,6 +22,7 @@ public class BaseBuilderProxyDecorator implements Builder {
 
     public BaseBuilderProxyDecorator(CarPartsFactory factory){
         this.carPartsFactory = factory;
+        this.builder = new CarBuilder(this.carPartsFactory);
     }
 
     @Override
