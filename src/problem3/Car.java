@@ -16,7 +16,7 @@ import java.util.List;
 public class Car {
     private List<Door> doors;
     private List<Wheel> wheels;
-    private List<Roof> roofs;
+    private Roof roof;
     private Color color;
     private CompanyName companyName;
 
@@ -31,7 +31,7 @@ public class Car {
     }
 
     public Car setRoofs(Roof roof) {
-        this.roofs.add(roof);
+        this.roof = roof; 
         return this;
     }
 
@@ -43,7 +43,7 @@ public class Car {
     public Car() {
         this.doors = new ArrayList<>();
         this.wheels = new ArrayList<>();
-        this.roofs = new ArrayList<>();
+        this.roof = null; 
         this.color = Color.BLACK;
     }
 
@@ -54,7 +54,11 @@ public class Car {
     }
 
     public int numRoofs() {
-        return roofs.size();
+        if(roof == null){
+            return 0; 
+        } else{
+            return 1; 
+        }
     }
 
     public Car setColor(Color color) {
@@ -79,10 +83,7 @@ public class Car {
     }
 
     public Roof getRoof() {
-        if(roofs.size() == 0){
-            return null;
-        }
-        return roofs.get(0);
+        return roof;
     }
 }
 /**
