@@ -29,7 +29,7 @@ public class LoggingBuilderProxyDecorator extends BaseBuilderProxyDecorator {
     @Override
     public Car getCar() {
         logger.log(LogLevel.INFO, "Building a car is completed!");
-        return builder.getCar();
+        return super.getCar();
     }
 }
 /**

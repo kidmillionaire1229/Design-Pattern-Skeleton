@@ -21,7 +21,7 @@ public class CheckingBuilderProxyDecorator extends BaseBuilderProxyDecorator {
 
     @Override
     public Car getCar() {
-        Car car = builder.getCar();
+        Car car = super.getCar();
         if(!checkCarDoorsValid(car)) return null;
         if(!checkCarWheelsValid(car)) return null;
         if(!checkCarRoofValid(car)) return null;
