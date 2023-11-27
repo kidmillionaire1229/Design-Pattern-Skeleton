@@ -12,6 +12,7 @@ import problem3.Color;
  * If necessary, you can make your own methods or classes so that the corresponding tests are passed
  */
 public class BaseBuilderProxyDecorator implements Builder {
+    //wrappee
     protected Builder builder;
 
 
